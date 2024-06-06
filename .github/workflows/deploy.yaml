@@ -1,0 +1,19 @@
+name: unit-test
+run-name: ${{ github.author }} is running unit tests
+on: [push]
+
+jobs:
+  running-unit-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository code
+        uses: actions/checkout@v4
+      - name: List files in the repository
+        run: ls ${{ github.workspace }}
+      - name: Install dependencies
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+      - run: bun install
+      - name: Run unit testing
+        run: bun run test
