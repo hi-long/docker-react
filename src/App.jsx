@@ -1,10 +1,10 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <>
@@ -22,14 +22,14 @@ function App() {
           count is {count}
         </button>
         <p>
-          Edit <code>src/App.jsx</code> and  to tdddddddcccdestooooo HMR
+          Edit <code>src/App.jsx</code> and to HMR
         </p>
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos aaaaaaato learccccccn more
       </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

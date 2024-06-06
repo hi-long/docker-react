@@ -1,36 +1,16 @@
 services:
   web:
-    build: 
+    build:
       context: .
       dockerfile: Dockerfile.dev
     ports:
       - 3000:3000
-    develop:
-      watch:
-        - action: sync
-          path: ./
-          target: /app
-          ignore:
-            - node_modules/
-        - action: rebuild
-          path: package.json
-    volumes:
-      - /app/node_modules
-      - .:/app
-  tests:
-    build: 
-      context: .
-      dockerfile: Dockerfile.dev
-    command: ["bun", "run", "test"]
-    develop:
-      watch:
-        - action: sync
-          path: ./
-          target: /app
-          ignore:
-            - node_modules/
-        - action: rebuild
-          path: package.json
-    # volumes:
-    #   - /app/node_modules
-    #   - .:/app
+    # develop:
+    #   watch:
+    #     - action: sync
+    #       path: ./
+    #       target: /app
+    #       ignore:
+    #         - node_modules/
+    #     - action: rebuild
+    #       path: package.json
